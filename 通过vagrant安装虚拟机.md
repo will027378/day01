@@ -1,20 +1,18 @@
-#通过vagrant安装虚拟机
-
-##安装前工具准备
-1VirtualBox-4.3.10-93012-Win<br>
-2vagrant_1.5.4.msi<br>
-3UbuntuServer12.04amd64.box<br>
-##开始安装
-1首先安装虚拟机VirtualBox<br>
-直接下一步下一步就ok了<br>
-2接下来安装vagrant<br>
-直接下一步下一步安装<br>
-完成后在控制台中输入vagrant验证安装是否成功<br>
-3安装操作系统<br>
-(1)在你某个盘(你想要将虚拟机安装的位置)中建立一个文件夹(名字随意比如boxs),然后
-将UbuntuServer12.04amd64.box拷贝到这个文件夹中<br>
-(2)在控制台执行命令vagrant box add master UbuntuServer12.04amd64.box<br>
-(3)修改boxs中配置文件Vagrantfile，自己百度下<br>
-(4)执行命名vagrant init<br>
-(5)执行命令vagrant up<br>
-到此安装完成
+#通过Vagrant在Windows下部署linux开发环境
+##安装步骤
+###1.安装VirtualBox
+VirtualBox是一款免费开源虚拟机软件<br>
+下载地址：https://www.virtualbox.org/wiki/Downloads<br>
+安装：通过步骤一步一步安装就ok<br>
+###2.安装Vagrant
+Vagrant用于创建和部署虚拟化开发环境<br>
+下载地址：http://downloads.vagrantup.com/<br>
+安装：通过步骤一步一步安装就ok<br>
+###3.下载linux镜像box文件
+下载地址：http://www.vagrantbox.es/<br>
+###4.正式部署linux环境
+#####1.添加镜像到vagrant
+在控制台输入：<br>
+$vagrant box add  master ~/boxs/UbuntuServer12.04amd64.box<br>
+master是我们给这个box命的名字，你可以按你的情况命名；~/boxs/UbuntuServer12.04amd64.box是box所在路径
+#####2.初始化开发环境
